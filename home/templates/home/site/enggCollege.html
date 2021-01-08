@@ -1,0 +1,28 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+        
+  {% block content %}     
+  <section class="section novi-background bg-cover section-70 section-md-114 bg-catskill">
+    <div class="shell isotope-wrap">
+        <h2 class="text-bold">Engineering&nbsp;colleges</h2>
+        <hr class="divider bg-madison">
+        <div class="row range-30 isotope offset-top-60 text-left">
+            {% for college in enggColleges %}
+            <div class="col-xs-12 col-sm-6 col-md-4 isotope-item">
+                <article class="post-course"><a href="course-details.html"><img class="img-responsive" src="images/blog/news-01-370x240.jpg" width="370" height="240" alt=""></a>
+                    <div class="post-news-body">
+                        <h6><a href="course-post-page.html">{{college.title}}</a></h6>
+                        <div class="offset-top-10">
+                            <p>{{college.content|safe|truncatechars:300}}</p>
+                        </div>
+                        <div class="post-course-meta offset-top-20"><span class="text-middle text-black"><a href="{% url 'home:EnggCollegeDetail' college.slug %}">Read More</a></Read></span><span class="icon inset-left-10 novi-icon icon-xs text-middle text-madison mdi-arrow-right mdi"></span></div>
+                    </div>
+                </article>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="offset-top-50"><a class="btn btn-primary" href="grid-news.html">View All Courses</a></div>
+    </div>
+</section>
+{% endblock content %}

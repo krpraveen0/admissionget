@@ -1,0 +1,299 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}   
+        <section class="section">
+            <div class="swiper-container swiper-slider swiper-slider-modern swiper-slider-2" data-loop="true" data-dragable="false" data-slide-effect="fade">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" data-slide-bg="{% static 'images/slide-04-1920x810.png' %}" style="background-position: 80% center">
+                        <div class="swiper-slide-caption section-70">
+                            <div class="container">
+                                <div class="range range-xs-center">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" data-slide-bg="{% static 'images/slide-02-1920x810.png' %}" style="background-position: 80% center">
+                        <div class="swiper-slide-caption section-70">
+                            <div class="container">
+                                <div class="range range-xs-center">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" data-slide-bg="{% static 'images/slide-03-1920x810.png' %}" style="background-position: 80% center">
+                        <div class="swiper-slide-caption section-70">
+                            <div class="container">
+                                <div class="range range-xs-center">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-prev fa-arrow-left"></div>
+                <div class="swiper-button-next fa-arrow-right"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+        <section class="section novi-background bg-cover section-70 section-md-114 bg-default">
+            <div class="shell">
+                <div class="range range-50">
+                    <div class="cell-sm-4 cell-sm-push-2 text-sm-left">
+                        <div class="inset-sm-left-50"><img class="img-responsive reveal-inline-block img-rounded" src="{% static 'images/aget-sidebar-340x300.png' %}" alt="" width="340" height="300">
+                            <div class="offset-top-20">
+                                <h6 class="text-primary text-bold">AdmissionGet.Com</h6>
+                            </div>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="cell-sm-8 cell-sm-push-1 text-sm-left">
+                        <h2 class="text-bold">About the AdmissionGet</h2>
+                        <hr class="divider bg-madison hr-sm-left-0">
+                        <div class="offset-top-30 offset-sm-top-30">
+                            <p>We’re Admission Get, an educational consultancy that likes to help, collaborate, and assist college students to pursue the career of their choice. Admission Get turned started by using a number of like-minded entrepreneurs dedicated to helping students with admission.
+
+                                Our consultancy companions have been serving college students for more than a decade.
+                                
+                                We are assisting college students with admission thru control quota seats.
+                               
+                                </p>
+                        </div>
+                        <p>Our consultancy website came into lifestyles in the 12 months of 2013 to leverage the blessings of the internet & online advertising and marketing.
+                                
+                            Though we made our online presence in 2013, we have been running our tutorial consultancy in Bengaluru in view that 2007.
+                            
+                            We've got hooked up ourselves as one of the quality admission consultancies whom you can rely upon for university admission.
+                            
+                            In our early days, most of the private faculties in India had been dependent on dealers for college kids and advertising.</p>
+                        <p>With the advancement of technology, the maximum of the university has made their online presence to attract students for admission.
+                                
+                            To assist our customers we constructed a platform in which you can find pinnacle colleges, and get excellent statistics approximately the admission process.
+                            
+                            Our website has an international technique that attracts quite a few clients and potentialities throughout the globe.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section context-dark section-image-aside section-image-aside-left">
+            <div class="novi-background bg-cover section-70 section-md-114 bg-madison">
+                <div class="shell">
+                    <div class="range range-xs-center range-sm-right offset-top-0">
+                        <div class="cell-xs-10 cell-sm-7 text-sm-left">
+                            <div class="section-image-aside-img bg-cover veil reveal-sm-block" style="background-image: url({% static 'images/home-10-846x1002.png' %})"></div>
+                            <div class="section-image-aside-body inset-sm-left-70 inset-lg-left-110">
+                                <h2 class="text-bold">Top Courses we guide for</h2>
+                                <hr class="divider hr-sm-left-0 bg-white">
+                                <div class="offset-top-30 offset-md-top-30 text-light">We always try to give all the available best options available for you.</div>
+                                <div class="text-left post-vacation-wrap offset-top-30">
+                                    <article class="post-vacation"><a class="post-vacation-img-wrap bg-cover bg-image" href="{% url 'home:medicalCollege' %}" style="background-image: url({% static 'images/course-01-150x120.png' %})"></a>
+                                        <div class="post-vacation-body">
+                                            <div>
+                                                <h6 class="post-vacation-title"><a href="{% url 'home:medicalCourse' %}">Medical Courses</a></h6>
+                                            </div>
+                                            <div class="offset-lg-top-10">
+                                                <p>MBBS | BDS | BHMS | BAMS </p>
+                                            </div>
+                                            <div class="post-vacation-meta offset-top-10">
+                                                <ul class="list-inline list-unstyled list-inline-primary">
+                                                    <li><a class="icon novi-icon icon-xxs mdi mdi-timer-sand" href="#" data-toggle="tooltip" data-placement="top" title="Part time"></a></li>
+                                                    <li><a class="icon novi-icon icon-xxs mdi mdi-star" href="#" data-toggle="tooltip" data-placement="top" title="Certified"></a></li>
+                                                    <li><a class="icon novi-icon icon-xxs mdi mdi-laptop-chromebook" href="#" data-toggle="tooltip" data-placement="top" title="Online Course"></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="post-vacation"><a class="post-vacation-img-wrap bg-cover bg-image" href="{% url 'home:medicalCollege' %}" style="background-image: url({% static 'images/course-02-150x120.png' %})"></a>
+                                        <div class="post-vacation-body">
+                                            <div>
+                                                <h6 class="post-vacation-title"><a href="{% url 'home:enggCourse' %}">Engineering Courses</a></h6>
+                                            </div>
+                                            <div class="offset-lg-top-10">
+                                                <p>B.Tech.| BE | B.Arch </p>
+                                            </div>
+                                            <div class="post-vacation-meta offset-top-10">
+                                                <ul class="list-inline list-unstyled list-inline-primary">
+                                                    <li><a class="icon novi-icon icon-xxs mdi mdi-battery-50" href="#" data-toggle="tooltip" data-placement="top" title="Facultative"></a></li>
+                                                    <li><a class="icon novi-icon icon-xxs mdi mdi-star" href="#" data-toggle="tooltip" data-placement="top" title="Certified"></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="post-vacation"><a class="post-vacation-img-wrap bg-cover bg-image" href="{% url 'home:mmgCollege' %}" style="background-image: url({% static  'images/course-03-150x120.png' %})"></a>
+                                        <div class="post-vacation-body">
+                                            <div>
+                                                <h6 class="post-vacation-title"><a href="{% url 'home:mmgCourse' %}">Management Courses</a></h6>
+                                            </div>
+                                            <div class="offset-lg-top-10">
+                                                <p>BBA | MBA </p>
+                                            </div>
+                                            <div class="post-vacation-meta offset-top-10">
+                                                <ul class="list-inline list-unstyled list-inline-primary">
+                                                    <li><a class="icon novi-icon icon-xxs mdi mdi-battery-50" href="#" data-toggle="tooltip" data-placement="top" title="Facultative"></a></li>
+                                                    <li><a class="icon novi-icon icon-xxs mdi mdi-star" href="#" data-toggle="tooltip" data-placement="top" title="Certified"></a></li>
+                                                    <li><a class="icon novi-icon icon-xxs mdi mdi-laptop-chromebook" href="#" data-toggle="tooltip" data-placement="top" title="Online Course"></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="post-vacation"><a class="post-vacation-img-wrap bg-cover bg-image" href="{% url 'home:lawCollege' %}" style="background-image: url({% static  'images/course-04-150x120.png' %})"></a>
+                                        <div class="post-vacation-body">
+                                            <div>
+                                                <h6 class="post-vacation-title"><a href="{% url 'home:mmgCourse' %}">Law Courses</a></h6>
+                                            </div>
+                                            <div class="offset-lg-top-10">
+                                                <p> BA.LLB | B.com(LLB) </p>
+                                            </div>
+                                            <div class="post-vacation-meta offset-top-10">
+                                                <ul class="list-inline list-unstyled list-inline-primary">
+                                                    <li><a class="icon novi-icon icon-xxs mdi mdi-battery-50" href="#" data-toggle="tooltip" data-placement="top" title="Facultative"></a></li>
+                                                    <li><a class="icon novi-icon icon-xxs mdi mdi-star" href="#" data-toggle="tooltip" data-placement="top" title="Certified"></a></li>
+                                                    <li><a class="icon novi-icon icon-xxs mdi mdi-laptop-chromebook" href="#" data-toggle="tooltip" data-placement="top" title="Online Course"></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </article>
+
+                                </div>
+                                <div class="offset-top-60"><a class="btn btn-primary" href="course-details.html">View All Courses</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section novi-background bg-cover section-70 section-md-114 bg-default">
+            <div class="shell">
+                <h2 class="text-bold">Admission Statistics</h2>
+                <hr class="divider bg-madison">
+                <div class="range range-65 range-xs-center range-md-left offset-top-55 counters">
+                    <div class="cell-sm-6 cell-md-3">
+                        <div class="counter-type-1"><span class="icon novi-icon icon-lg icon-outlined text-madison mdi mdi-school"></span>
+                            <div class="h3 text-bold text-primary offset-top-15"><span class="counter">3476</span></div>
+                            <hr class="divider bg-gray-light divider-sm">
+                            <div class="offset-top-10">
+                                <h6 class="text-black font-accent">Engineering</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell-sm-6 cell-md-3">
+                        <div class="counter-type-1"><span class="icon novi-icon icon-lg icon-outlined text-madison mdi mdi-wallet-travel"></span>
+                            <div class="h3 text-bold text-primary offset-top-15"><span class="counter">2456</span><span class="symbol">+</span></div>
+                            <hr class="divider bg-gray-light divider-sm">
+                            <div class="offset-top-10">
+                                <h6 class="text-black font-accent">Medical</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell-sm-6 cell-md-3">
+                        <div class="counter-type-1"><span class="icon novi-icon icon-lg icon-outlined text-madison mdi mdi-domain"></span>
+                            <div class="h3 text-bold text-primary offset-top-15"><span class="counter">8765</span><span class="symbol"></span></div>
+                            <hr class="divider bg-gray-light divider-sm">
+                            <div class="offset-top-10">
+                                <h6 class="text-black font-accent">Management</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell-sm-6 cell-md-3">
+                        <div class="counter-type-1"><span class="icon novi-icon icon-lg icon-outlined text-madison mdi mdi-account-multiple-outline"></span>
+                            <div class="h3 text-bold text-primary offset-top-15"><span class="counter">6510</span><span class="symbol"></span></div>
+                            <hr class="divider bg-gray-light divider-sm">
+                            <div class="offset-top-10">
+                                <h6 class="text-black font-accent">Law</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section novi-background bg-cover section-70 section-xl-100 section-xl-bottom-114 bg-madison context-dark position-relative">
+            <div class="owl-carousel owl-carousel-default veil-xl-owl-dots veil-owl-nav reveal-xl-owl-nav" data-items="1" data-nav="true" data-dots="true" data-nav-class="[&quot;owl-prev fa-angle-left&quot;, &quot;owl-next fa-angle-right&quot;]">
+                <div>
+                    <div class="shell">
+                        <div class="range range-xs-center range-xs-middle">
+                            <div class="cell-sm-9 cell-sm-push-1">
+                                <div class="quote-classic-boxed text-center">
+                                    <div class="quote-body"><q>I was very tensed about my admission in Engineering College, As I was not getting my choice course in any reputed colleges due to various reasons but AdmissionGet helped me to get admission in a decent reputed college that too in my dream course also.</q>
+                                        <div class="offset-top-30 text-center"><cite class="font-accent">Aman Singh</cite>
+                                            <div class="offset-top-5">
+                                                <p class="text-dark text-italic">B.Tech, BMS College of Engineering</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="shell">
+                        <div class="range range-xs-center range-xs-middle">
+                            <div class="cell-sm-9 cell-sm-push-1">
+                                <div class="quote-classic-boxed text-center">
+                                    <div class="quote-body"><q>When I researched the programmes available I realized that the University was offering exactly the type of programme in international development that interested me.</q>
+                                        <div class="offset-top-30 text-center"><cite class="font-accent">Steven Alvarez</cite>
+                                            <div class="offset-top-5">
+                                                <p class="text-dark text-italic">Diploma for Graduates in International Development, USA</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section novi-background bg-cover section-70 section-md-114 bg-catskill">
+            <div class="shell isotope-wrap">
+                <h2 class="text-bold">Latest News</h2>
+                <hr class="divider bg-madison">
+                <div class="row range-30 isotope offset-top-50 text-left">
+                    <div class="col-xs-12 col-sm-6 col-md-4 isotope-item">
+                        <article class="post-news"><a href="/blog/blogpost"><img class="img-responsive" src="{% static 'images/blog/news-04-370x240.jpg' %}" alt="" width="370" height="240"></a>
+                            <div class="post-news-body">
+                                <h6><a href="/blog/blogpost"> Ways Parents and Counselors</a></h6>
+                                <div class="offset-top-20">
+                                    <p>Securing scholarships can be stressful, but parents and counselors can serve as a resource.</p>
+                                </div>
+                                <div class="post-news-meta offset-top-20"><span class="icon novi-icon icon-xs mdi mdi-calendar-clock text-middle text-madison"></span><span class="text-middle inset-left-10 text-italic text-black">3 days ago</span></div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 isotope-item">
+                        <article class="post-news"><a href="/blog/blogpost"><img class="img-responsive" src="{% static 'images/blog/news-05-370x240.jpg' %}" alt="" width="370" height="240"></a>
+                            <div class="post-news-body">
+                                <h6><a href="/blog/blogpost"> Consider MBA Programs</a></h6>
+                                <div class="offset-top-20">
+                                    <p>Summer preparatory programs offered through schools allow students to get a head start on making connections and building skills.</p>
+                                </div>
+                                <div class="post-news-meta offset-top-20"><span class="icon novi-icon icon-xs mdi mdi-calendar-clock text-middle text-madison"></span><span class="text-middle inset-left-10 text-italic text-black">4 days ago</span></div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 isotope-item">
+                        <article class="post-news"><a href="/blog/blogpost"><img class="img-responsive" src="{% static 'images/blog/news-06-370x240.jpg' %}" alt="" width="370" height="240"></a>
+                            <div class="post-news-body">
+                                <h6><a href="/blog/blogpost">Studying in the United States</a></h6>
+                                <div class="offset-top-20">
+                                    <p>International students increasingly want to come to the United States for college or graduate school.</p>
+                                </div>
+                                <div class="post-news-meta offset-top-20"><span class="icon novi-icon icon-xs mdi mdi-calendar-clock text-middle text-madison"></span><span class="text-middle inset-left-10 text-italic text-black">2 days ago</span></div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="offset-top-50"><a class="btn btn-primary" href="{% url 'blog:post_list' %}">View All News Posts</a></div>
+            </div>
+        </section>
+{% endblock content %}
+       
+    
+    
+    
+
+
+

@@ -1,0 +1,128 @@
+{% extends "blog/base.html" %}
+{% load blog_tags %}
+
+{% block title %}My Blog{% endblock %}
+
+
+{% block content %}
+  <h1>My Blog</h1>
+  <section class="section breadcrumb-modern context-dark parallax-container" data-parallax-img="images/parallax-03.jpg">
+    <div class="parallax-content section-30 section-sm-70">
+        <div class="shell">
+            <h2 class="veil reveal-sm-block">AdmissionGet.com Blogs</h2>
+            <div class="offset-sm-top-35">
+                <ul class="list-inline list-inline-lg list-inline-dashed p">
+                    <li><a href="index.html">Home</a></li>
+                    <li>Blogs</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<div id="fb-root"></div>
+{% if tag %}
+    <h2>Posts tagged with "{{ tag.name }}"</h2>
+  {% endif %}
+
+
+    <section class="section novi-background bg-cover section-70 section-md-114 bg-default">
+        <div class="shell">
+            <div class="range range-50 range-xs-center">
+              {% for post in posts %}
+                <div class="cell-sm-8 cell-md-8 text-md-left">
+                    <h3 class="text-bold"> <a href="{{ post.get_absolute_url }}">
+                      {{post.title}}</a> 
+                    </h3>
+                    <hr class="divider bg-madison hr-md-left-0">
+                    <div class="offset-md-top-20 offset-top-10">
+                        <ul class="post-news-meta list list-inline list-inline-xl">
+                            <li><span class="icon novi-icon icon-xs mdi mdi-calendar-clock text-middle text-madison"></span><span class="text-middle inset-left-10 text-italic text-black">{{ post.publish }} by {{ post.author }}</span></li>
+              
+                        </ul>
+                    </div>
+                    <div class="offset-top-30"><img class="img-responsive" src="images/blog/news-03-770x500.jpg" width="770" height="500" alt="">
+                        <div class="offset-top-30">
+                            <p>{{ post.body|safe |markdown|truncatewords_html:30 }}</p>
+                        </div>
+                    </div>
+                    <div class="offset-top-30 post-news-meta range range-20 range-xs-middle range-xs-center">
+                        <div class="cell-md-6">
+                            <div class="tags-list group group-sm reveal-inline-block text-middle">
+                              {% for tag in post.tags.all %}
+                              <a class="btn btn-xs btn-primary text-italic" href="{% url 'blog:post_list_by_tag' tag.slug">{{ tag.name }}</a>
+                              {% if not forloop.last %}, {% endif %}
+                              {% endfor %}
+                            </div>
+                        </div>
+                        <div class="cell-md-6">
+                            <ul class="list-inline list-inline-xs list-inline-madison pull-md-right text-middle">
+                                <li><a class="icon novi-icon icon-xxs fa-facebook icon-circle icon-gray-light-filled" href="https://www.facebook.com/rightcollege"></a></li>
+                            <li><a class="icon novi-icon icon-xxs fa-twitter icon-circle icon-gray-light-filled" href="https://twitter.com/Admissionget1"></a></li>
+                            <li><a class="icon novi-icon icon-xxs fa-linkedin icon-circle icon-gray-light-filled" href="https://www.linkedin.com/in/admission-get/"></a></li>
+                            <li><a class="icon novi-icon icon-xxs fa-instagram icon-circle icon-gray-light-filled" href="https://www.instagram.com/getadmissionsinindia/"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+              {% endfor %}
+                <div class="cell-xs-8 cell-md-4 text-left">
+                    <aside class="aside inset-md-left-30">
+                        <div class="aside-item">
+                            <h6 class="text-bold">Search</h6>
+                            <div class="text-subline"></div>
+                            <div class="offset-top-30">
+                                <form class="form-search rd-search form-search-widget" action="search-results.html" method="GET">
+                                    <div class="form-group">
+                                        <div class="input-group"><input class="form-search-input  form-control" type="text" name="s" autocomplete="off"><span class="input-group-btn"><button class="btn btn-primary" type="submit"><span class="icon fa-search"></span></button></span></div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="aside-item">
+                            <h6 class="text-bold">Archive</h6>
+                            <div class="text-subline"></div>
+                            <div class="row offset-top-20">
+                                <div class="col-xs-6">
+                                    <ul class="list list-marked list-marked-primary">
+                                        <li><a href="#">Jun 2019</a></li>
+                                        <li><a href="#">Aug 2018</a></li>
+                                        <li><a href="#">Oct 2<span data-novi-id="4">01</span></a><span data-novi-id="5">8</span></li>
+                                        <li><a href="#">Dec 2018</a></li>
+                                        <li><a href="#">Feb 2017</a></li>
+                                    </ul>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="aside-item">
+                            <h6 class="text-bold">Gallery</h6>
+                            <div class="text-subline"></div>
+                            <div class="range range-condensed range-custom offset-top-20" data-lightgallery="group">
+                                <div class="cell-6"><a class="thumbnail-default" href="images/portfolio/gallery-10-1200x800-original.jpg" data-lightgallery="item"><img src="images/portfolio/gallery-10-320x320.jpg" alt="" width="320" height="320"><span class="icon novi-icon fa-search-plus"></span></a></div>
+                                <div class="cell-6"><a class="thumbnail-default" href="images/portfolio/gallery-11-1200x800-original.jpg" data-lightgallery="item"><img src="images/portfolio/gallery-11-320x320.jpg" alt="" width="320" height="320"><span class="icon novi-icon fa-search-plus"></span></a></div>
+                                <div class="cell-6"><a class="thumbnail-default" href="images/portfolio/gallery-12-1200x800-original.jpg" data-lightgallery="item"><img src="images/portfolio/gallery-12-320x320.jpg" alt="" width="320" height="320"><span class="icon novi-icon fa-search-plus"></span></a></div>
+                                <div class="cell-6"><a class="thumbnail-default" href="images/portfolio/gallery-13-1200x800-original.jpg" data-lightgallery="item"><img src="images/portfolio/gallery-13-320x320.jpg" alt="" width="320" height="320"><span class="icon novi-icon fa-search-plus"></span></a></div>
+                                <div class="cell-6"><a class="thumbnail-default" href="images/portfolio/gallery-14-533x800-original.jpg" data-lightgallery="item"><img src="images/portfolio/gallery-14-320x320.jpg" alt="" width="320" height="320"><span class="icon novi-icon fa-search-plus"></span></a></div>
+                                <div class="cell-6"><a class="thumbnail-default" href="images/portfolio/gallery-15-1200x800-original.jpg" data-lightgallery="item"><img src="images/portfolio/gallery-15-320x320.jpg" alt="" width="320" height="320"><span class="icon novi-icon fa-search-plus"></span></a></div>
+                            </div>
+                        </div>
+                        <div class="aside-item">
+                            <h6 class="text-bold">Categories</h6>
+                            <div class="text-subline"></div>
+                            <div class="offset-top-20">
+                                <ul class="list list-marked list-marked-primary">
+                                    <li><a href="#">News</a></li>
+                                    <li><a href="#">University</a></li>
+                                    <li><a href="#">Global Education</a></li>
+                                    <li><a href="#">Law</a></li>
+                                    <li><a href="#">Colleges</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% include "pagination.html" with page=posts %}
+{% endblock %}
